@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px" >Close Menu</a>
+  <div class="w3-container">
+   <img src="IMG/logo.png" />
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicio</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fotografías</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Acerca</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Desarrolladores</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Resumen</a> 
+    <a href="#Objetivos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Objetivos</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contáctanos</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">#3ccf61;</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Fotografías</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Uso del aplicativo</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+ <div class="w3-row-padding w3">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+          <ul class="w3-ul w3-light-grey w3-center"> <img src="IMG/uno.jpg" onclick="onClick(this)" class=" borde" /> </ul>
+        <div class="w3-container">
+            
+          <h3>Lina Valencia</h3>
+          <p class="w3-opacity">Docente de Lengua Castellana</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+         <ul class="w3-ul w3-light-grey w3-center"> <img src="IMG/Dos.jpg" onclick="onClick(this)" class=" borde"/> </ul>
+        <div class="w3-container">
+          <h3>Ana Sofía Rojas</h3>
+          <p class="w3-opacity">Estudiante de grado once</p>
+            
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+          <ul class="w3-ul w3-light-grey w3-center"> <img src="IMG/3.jpg" onclick="onClick(this)" class=" borde"/> </ul>
+        
+        <div class="w3-container">
+          <h3>Adriana Sánchez</h3>
+          <p class="w3-opacity">Docente de Ciencias Sociales</p>
+         
+        </div>
+      </div>
+        
+    </div>
+      <div class="w3-light-grey">
+          <ul class="w3-ul w3-light-grey w3-left"> <img src="IMG/4.png" onclick="onClick(this)" class=" borde"/> </ul>
+        <img src="/w3images/team3.jpg" alt="" style="width:100%">
+        <div class="w3-container">
+          <h3>Elisa Fonnegra Tarazona</h3>
+          <p class="w3-opacity">Estudiante de grado once</p>
+         
+        </div>
+      </div>
+  </div>
+
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Acerca</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+      
+      <h1 class="w3-xxxlarge w3-text-red"><b>Valores Corporativos</b></h1>
+    
+    <p>Se desarrollará un aplicativo móvil en el cual a los estudiantes del grado décimo y undécimo de la Institución Educativa Concejo de Medellín, pertenecientes a la jornada de la mañana, se les sea permitido administrar de una manera sencilla y evidente el registro del Servicio Social Estudiantil Obligatorio, asimismo se encontrará una plantilla que les posibilite realizar el registro y verificación de horas por parte de los alumnos y docentes, además de efectuar emisiones al ente encargado de su aprobación.</p>
+      
+      <h1 class="w3-xxxlarge w3-text-red"><b>Alcance</b></h1>
+    
+    <p>Se desarrollará un aplicativo móvil en el cual a los estudiantes del grado décimo y undécimo de la Institución Educativa Concejo de Medellín, pertenecientes a la jornada de la mañana, se les sea permitido administrar de una manera sencilla y evidente el registro del Servicio Social Estudiantil Obligatorio, asimismo se encontrará una plantilla que les posibilite realizar el registro y verificación de horas por parte de los alumnos y docentes, además de efectuar emisiones al ente encargado de su aprobación.</p>
+      <h1 class="w3-xxxlarge w3-text-red"><b>Misión</b></h1>
+      
+    <p>Servir como herramienta de optimización en cuanto a la gestión y papeleo del formato de alfabetización, a los estudiantes del grado décimo y undécimo de la Institución Educativa Concejo de Medellín, mediante un aplicativo móvil que permita administrar de una manera sencilla y evidente el registro del Servicio Social Estudiantil Obligatorio.</p>
+       <h1 class="w3-xxxlarge w3-text-red"><b>Visión</b></h1>
+    
+    <p>Para el año 2019 se pretende evidenciar el uso del aplicativo móvil a nivel institucional, en la sede principal y en ambas jornadas, además de dar inicio a la implementación de esta herramienta en otras instituciones, atendiendo así a las necesidades de los estudiantes y realizando modificaciones que impacten de manera beneficiosa a la misma.</p>
+      
+      
+       
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Desarrolladores</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    
+    <p>El equipo de Alf -App se ha comprometido a lo largo del desarrollo de este aplicativo, su resilencia, responsabilidad y disciplina nos la llevado a cumplir las metas y objetivos que se fueron encomendados. El trabajo en equipo es una condición que implica trabajar en cooperación con otros de una manera armónica, coordinada y enfocada, aprovechando las fortalezas de cada cual y potenciándolas a favor de todos. No se han generado trabajos o logros independientes; todos adquirimos un ambiente laboral de enriquecimiento personal, generando grandes lazos y amistades.
+    </p>
+    <p><b>Integrantes:</b></p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+          <ul class="w3-ul w3-light-grey w3-center"> <img src="IMG/Manuela.jpg" class="animar borde" /> </ul>
+        <div class="w3-container">
+          <h3>Manuela Botero Garcés</h3>
+          <p class="w3-opacity">Documentadora -Tester</p>
+          <p>Estudiante de la Institución Educativa Concejo De Medellín, y participante de la media técnica de Desarrollo de Software promocionada por Politécnico Jaime Isaza Cadavid y la Alcaldía de Medellín.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+         <ul class="w3-ul w3-light-grey w3-center"> <img src="IMG/Miguel.jpg"  class="animar borde"/> </ul>
+        <div class="w3-container">
+          <h3>Miguel Ángel Correa Manrique</h3>
+          <p class="w3-opacity">Gerente -Tester</p>
+            <p>Estudiante de la Institución Educativa Concejo De Medellín, y participante de la media técnica de Desarrollo de Software promocionada por Politécnico Jaime Isaza Cadavid y la Alcaldía de Medellín.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+          <ul class="w3-ul w3-light-grey w3-center"> <img src="IMG/Leidy.jpg"  class="animar borde"/> </ul>
+        <img src="/w3images/team3.jpg" alt="" style="width:100%">
+        <div class="w3-container">
+          <h3>Leidy Stephania Castaño Gómez</h3>
+          <p class="w3-opacity">Programadora -Tester</p>
+          <p>Estudiante de la Institución Educativa Concejo De Medellín, y participante de la media técnica de Desarrollo de Software promocionada por Politécnico Jaime Isaza Cadavid y la Alcaldía de Medellín.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Resumen</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-right">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Español</li>
+    
+          <li class="w3-light-grey w3-padding-24" > <p> En la Institución Educativa Concejo de Medellín, media técnica de programación, se
+creó una aplicación, utilizando el lenguaje de “Java”, cuyo objetivo se
+refleja en la organización de los registros del Servicio Social Estudiantil Obligatorio y en la 
+optimización del tiempo para diligenciarlo, dirigido a los estudiantes del grado 10 y 11. 
+En esta aplicación se encontrará un inicio de sesión, con 3 opciones; estudiante, docente y administrador, dándose éste se mostrará en pantalla un menú diferente para cada tipo de inicio, las alternativas mostradas dependerán de las funciones, para el alumno y docente se les otorgará un historial para ver las horas registradas efectivamente y las horas confirmadas respectivamente, el estudiante podrá hacer un envío de las horas al coordinador o a su correo al finalizar las mismas, y el administrador manejará los docentes habilitados para la confirmación de horas.
+El modelo de ciclo de vida utilizado para desarrollar dicha herramienta es en cascada, debido a componentes como la cantidad de recursos mínimos para la implementación, documentación producida en cada etapa del desarrollo, fácil comprensión del producto a diseñar y pruebas para la verificación del correcto funcionamiento del software, haciendo de este un oportuno modelo de adaptación al trabajo en proceso.
+Se implementó la metodología RUP ya que permite adaptar el proceso con las necesidades del cliente llevando un control de cambio a través de la validación de usuarios y el cronograma de actividades.</p>
+          
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-right">
+        <li class="w3-red w3-xlarge w3-padding-32">Inglés</li>
+        
+        
+          <li class="w3-light-grey w3-padding-24"> <p> In the  Educational Institution Council of Medellin ,  programming media technical, it  was created an application, using java language,  which objective is reflected in the register organization  of the  Compulsory Student Social Service  and on the time organization to fiil in it, it is addressed to the eleven and ten’s grade.
+The application is counting with a sign in with 3 options; student,  professor and administrator, when is given one of them, it will show on screen a different menu to each sign in type, the alternatives showed depend of the functions, for the student and professor will have granted a history to see the hours registered effectively and the hours confirmed respectively, the student will be able to send the hours to his coordinator or to his email by the time he finished it, the administrator will manage the enabled professors to confirm the hours.
+The model used to develop such tool  is named,  waterfall model, thanks to the components such as the  amount of minimum resources to the implementation, the documentation produced in each  phase of development , easy product comprehension to design and verification tests for the correct software functionality.
+It was implemented the RUP methodology because of it allows the adaptation of the costumer necessities carrying a change control trough the user validation and the activity chronogram.  </p>
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+    
+    <!-- Objetivos-->
+    <div class="w3-container" id="Objetivos" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Objetivos</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+      
+      <h1 class="w3-xxxlarge w3-text-red"><b>Objetivo General:</b></h1>
+    
+    <p>Desarrollar un aplicativo móvil en el cual a los estudiantes del grado décimo y undécimo de la Institución Educativa Concejo de Medellín se les sea permitido administrar de una manera sencilla y evidente el registro del Servicio Social Estudiantil Obligatorio.</p>
+      
+      <h1 class="w3-xxxlarge w3-text-red"><b>Objetivos Específicos: </b></h1>
+    
+    <ul>
+          <li>Analizar las necesidades que los estudiantes, docentes y directivas presentan a la hora de iniciar el proceso del Servicio Social Estudiantil Obligatorio que obstruyen la fluidez de información y/o acciones en el mismo.</li>
+          <li>Diseñar un aplicativo móvil compuesto por las diferentes funcionalidades que se requieren por parte de los usuarios para realizar el desarrollo habitual del Servicio Social Estudiantil Obligatorio.</li>
+          <li>Implementar los conocimientos adquiridos sobre las necesidades analizadas que posibilitan una gestión, administración y organización evidente para el desarrollo del aplicativo a través del lenguaje de programación java, acuñando una metodología de programación orientada objetos.</li>
+         <li>Comprobar el afianzamiento de la optimización referente al tiempo que es designado al inicio, durante y al finalizar el proceso, haciendo uso del aplicativo móvil.</li>
+              
+        </ul>
+      
+      
+
+      
+      
+       
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contáctanos</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    <p>Estamos interesados en las opiniones y dudas de nuestros usuarios, nos encontramos en una búsqueda constante de la mejora de nuestros servicios, ¡déjanos tu mensaje!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Nombre</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Mensaje</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Enviar Mensaje</button>
+        
+    </form>  
+        
+            
+         
+      
+      <button class="w3-button w3-block w3-red w3-margin-bottom"><div class="fakeimg">
+        <a title="Ir a Facebook" href="https://www.facebook.com/Alf-App-2207321429540701/"><img src="IMG/facebook.png" alt="Facebook" /></a> 
+      </div>
+         
+      <div class="fakeimg">
+          <a title="Ir a Instagram " href="http://www.instagram.com"><img src="IMG/Instagram.png" alt="Instagram" /></a> 
+      </div>
+      <div class="fakeimg">
+          <a title="Ir a Twitter" href="https://twitter.com/"><img src="IMG/twitter.png" alt="Twitter" /></a> 
+        </div></button>
+    
+        
+      
+    
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">infoalfapp@gmail.com <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"></a></p>
+
+    </div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
