@@ -1,0 +1,1 @@
+Developed mobile application using Android Studio and Firebase database for the Compulsory Student Social Service at public official schools in Medellín to improve the fluidity of administrative operations.
